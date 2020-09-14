@@ -2,7 +2,11 @@
     width: 100%;
     position: sticky;
     padding: 20px 0;
+    top: 0;
+    left: 0;
     background-color: #fff;
+    box-shadow: 2px 2px 5px #2c2a2a;
+    z-index: 99;
 }
 
 .header__container {

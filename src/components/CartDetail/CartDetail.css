@@ -1,0 +1,55 @@
+.cart-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: #ecdede;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.cart-details .img img {
+    width: 100px;
+}
+
+.cart-details .name {
+    align-self: center;
+    justify-content: center;
+}
+
+.cart-details .name h3 {
+    color: #F91944;
+}
+
+.count {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+input[type=number] {
+    padding: 10px;
+    font-size: 20px;
+    width: 60px;
+    height: 40px;
+    align-self: center;
+    justify-content: center;
+}
+
+.count button {
+    font-size: 30px;
+    width: 60px;
+    height: 40px;
+    align-self: center;
+    justify-content: center;
+    background: #F91944;
+    color: #fff;
+    border: none;
+    outline: 0;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

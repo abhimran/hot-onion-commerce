@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { OnionContex } from '../../App';
 import './FoodItem.css'
+
 
 const FoodItem = (props) => {
     const {name, subDescription, price, photo} = props.item;
+    const [cart, setCart, handleCart] = useContext(OnionContex)
     return (
         <div className="foodItem">
             <img src={photo} alt=""/>
@@ -10,7 +13,7 @@ const FoodItem = (props) => {
             <p>{subDescription}</p>
             <h3>${price}</h3>
             <div className="foodItem__btn">
-                <span>Add To Cart</span>
+                <span onClick={()=>handleCart(props.item)}>Add To Cart</span>
                 <span>View Detail</span>
             </div>
         </div>

@@ -1,0 +1,44 @@
+.cart {
+    padding: 100px 0;
+    background: #fff;
+    width: 100%;
+}
+
+.cart__container {
+    width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.cart__deleviry-detail {
+    padding: 10px;
+    border-right: 1px solid #444;
+}
+
+.cart-detail {
+    padding: 10px;
+}
+
+.total-info p {
+    margin-top: 7px;
+    font-size: 18px;
+    color: #444;
+    font-weight: bold;
+}
+
+.total-info button {
+    padding: 10px 20px;
+    background: #F91944;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    margin-top: 20px;
+}
+
+.total-info button:hover {
+    color: #F91944;
+    background: #fff;
+    border: 1px solid #F91944;
+}
