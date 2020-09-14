@@ -1,0 +1,59 @@
+.food-menu {
+    width: 100%;
+    background: #fff;
+    padding: 70px 0;
+}
+
+.foodMenu__container {
+    width: 1170px;
+    margin: auto;
+}
+
+.foodMenu__items-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.foodMenu__items-header span {
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.foodMenu__items-header span:hover {
+    color: #F91944;
+    border-bottom: 2px solid #F91944;
+}
+
+.active {
+    color: #F91944;
+    border-bottom: 2px solid #F91944;
+}
+
+.foodMenu__menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px
+}
+
+.checkOut-btn button {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: #F91944;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.checkOut-btn button:focus {
+    outline: 0;
+}
+
+.checkOut-btn button:hover {
+    cursor: pointer;
+}
+
+.checkOut-btn {
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+.foodItem {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.foodItem:hover {
+    box-shadow: 5px 5px 10px #444;
+}
+
+
+.foodItem img {
+    width: 200px;
+}
+
+.foodItem h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.foodItem p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.foodItem h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.foodItem__btn {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    visibility: hidden;
+
+}
+
+.foodItem__btn span {
+    color: #F91944;
+    border: 1px solid #F91944;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.foodItem__btn span:hover {
+    color: #fff;
+    background: #F91944;
+}
+
+.foodItem:hover .foodItem__btn {
+    visibility: visible;
+}

@@ -1,0 +1,63 @@
+.chooseUs {
+    width: 100%;
+    background: #fff;
+    padding: 40px 0;
+}
+
+.chooseUs__container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.chooseUs__title {
+    width: 40%;
+}
+
+.chooseUs__title h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.chooseUs__title p {
+    font-size: 18px;
+    color: #161515;
+    margin-bottom: 20px;
+}
+
+.chooseUs__card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.cardStyle img {
+    width: 100%;
+}
+
+.cardStyle h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.cardStyle p {
+    font-size: 18px;
+    color: #161515;
+}
+
+.cardStyle button {
+    border: none;
+    padding: 10px 20px;
+    margin-top: 30px;
+    background-color: #F91944;
+    color: #fff;
+    font-size: 16px;
+}
+
+.cardStyle button:focus {
+    outline: 0;
+}
+
+.cardStyle button:hover {
+    cursor: pointer;
+}
