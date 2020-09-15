@@ -1,14 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { OnionContex } from '../../App';
+import foodData from '../../foodData';
+import { getDatabaseCart } from '../../utilities/databaseManager';
 import CartDetail from '../CartDetail/CartDetail';
 import './Cart.css'
 
 const Cart = () => {
-    const [cart, setCart, handleCart] = useContext(OnionContex)
+    const [cart, setCart, handleCart, removeProduct, addBtn] = useContext(OnionContex);
+
+    // const [product, setProduct] = useState([]);
+     useEffect(() => {
+         const saveCart = getDatabaseCart();
+         const productKeys = Object.keys(saveCart);
+         const cartProducts = productKeys.map(key => {
+             const product = foodData.find(pd => pd.id == key);
+             product.quantity = saveCart[key];
+             return product;
+         })
+        //  setProduct(cartProducts);
+         setCart(cartProducts);
+     }, [])
     
-    const subtotal = cart.reduce((total, product)=> total + product.price,0)
+    // const subtotal = product.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+    const subtotal = cart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
     const tax= (subtotal/12).toFixed(2);
-    const total = Number(tax) + subtotal;
+    const total = (Number(tax) + Number(subtotal)).toFixed(2);
     return (
         <div className="cart">
             <div className="cart__container">
@@ -22,7 +38,7 @@ const Cart = () => {
                 </div>
                 <div className="order-info">
                     {
-                     cart.map(item=> <CartDetail cart={item} key={item.id}></CartDetail>)
+                     cart.map((item, index)=> <CartDetail cart={item} key={index} removeProduct={removeProduct} addBtn={addBtn}></CartDetail>)
                     }
                 </div>
                 <div className="total-info">

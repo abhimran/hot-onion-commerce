@@ -2,8 +2,9 @@ import React from 'react';
 import './CartDetail.css'
 
 const CartDetail = (props) => {
-    const {price, name, photo} = props.cart;
-    console.log(props.cart.name);
+    const {price, name, photo, quantity, id} = props.cart;
+    const {removeProduct} = props;
+
     return (
         <div className="cart-details">
             <div className="img">
@@ -15,8 +16,11 @@ const CartDetail = (props) => {
             </div>
             <div className="count">
                 <button className="plus">+</button>
-                <input type="number"/>
+                <input type="number" defaultValue={quantity || ''} />
                 <button className="minus">-</button>
+            </div>
+            <div className="removeItem">
+                <button onClick={()=>removeProduct(id)}>X</button>
             </div>
         </div>
     );
